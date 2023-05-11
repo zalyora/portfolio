@@ -11,9 +11,9 @@ export function WorkExperience() {
             time: 'November 2022 - now'
         },
         {
-            title: 'BlockSoftLab',
+            title: 'Office manager',
             description: 'Organize office work, manage content for social media, provide customer support and communication, create and translate technical documentation.',
-            name: 'Office manager',
+            name: 'BlockSoftLab',
             link: 'https://blocksoftlab.com/about',
             time: 'November 2017 - April 2019'
         }
