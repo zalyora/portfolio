@@ -1,40 +1,37 @@
+import React, { useState } from "react";
+import Work from './Work';
+
 export function WorkExperience() {
+    const [experience] = useState([
+        {
+            title: 'Trainee frontend developer',
+            description: 'Learn HTML, CSS, SCSS, JavaScript, React',
+            name: 'Robot-dreams',
+            link: 'https://robotdreams.cc/uk',
+            time: 'November 2022 - now'
+        },
+        {
+            title: 'BlockSoftLab',
+            description: 'Organize office work, manage content for social media, provide customer support and communication, create and translate technical documentation.',
+            name: 'Office manager',
+            link: 'https://blocksoftlab.com/about',
+            time: 'November 2017 - April 2019'
+        }
+    ]);
     return (
         <section className="work">
             <h2 className="section_title">Work experience</h2>
             <ul className="jobs_list section_width">
-                <li className="job">
-                    <p>
-                        <span className="bold">Employer: </span>selfemployed
-                    </p>
-                    <p>
-                        <span className="bold">Employment period: </span>2020 - present
-                    </p>
-                    <p>
-                        <span className="bold">Job title: </span>
-                        Freelance Translator/Proofreader
-                    </p>
-                    <p>
-                        <span className="bold">Project/Role description: </span>
-                        Edit, clarify and proofread from/into foreign languages. Create technical documentaion and texts for web sites, social media.
-                    </p>
-                </li>
-                <li className="job prev_job">
-                    <p>
-                        <span className="bold">Employer: </span>
-                        <a className="links" href="https://blocksoftlab.com/about" rel="noreferrer noopener" target="_blank">BlockSoftLab</a>
-                    </p>
-                    <p>
-                        <span className="bold">Employment period: </span>November 2017 - April 2019
-                    </p>
-                    <p>
-                        <span className="bold">Job title: </span>Office manager
-                    </p>
-                    <p>
-                        <span className="bold">Project/Role description: </span>
-                        Organize office work, manage content for social media, provide customer support and communication, create and translate technical documentation.
-                    </p>
-                </li>
+                {experience.map((item, index) => (
+                    <Work
+                        key={index}
+                        title={item.title}
+                        description={item.description}
+                        name={item.name}
+                        link={item.link}
+                        time={item.time}
+                    />
+                ))}
             </ul>
         </section>
     )
