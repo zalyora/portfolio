@@ -90,3 +90,21 @@ address {
   padding: 0;
   margin-bottom: 48px;
 }
+.projects_list {
+  padding-left: 14px;
+  list-style-type: disc;
+}
+.project {
+  margin-bottom: 8px;
+}
+.project_title {
+  color: #1e1e1e;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 4px;
+  transition: .3s;
+}
+.project_title:hover {
+  text-decoration-line: underline;
+}

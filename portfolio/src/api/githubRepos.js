@@ -6,7 +6,7 @@ export async function FetchProjects(onFetched) {
     const items = result.map(item => ({
         name: item.full_name.split('/').splice(-1, 1).join(),
         url: item.html_url,
-        descr: item.description
+        descr: item.description,
     }));
-    return onFetched(items);
+    onFetched(items);
 }
