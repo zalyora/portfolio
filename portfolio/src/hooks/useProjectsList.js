@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { fetchProjects } from '../api/githubRepos';
+import { FetchProjects } from '../api/githubRepos';
 
 export default function useProjectsList(initialItems = []) {
     const [items, setItems] = useState(initialItems);
 
     useEffect(() => {
-        fetchProjects(setItems);
+        FetchProjects(setItems);
     }, []);
 
     return   {

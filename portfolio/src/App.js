@@ -1,4 +1,3 @@
-import { useState, useEffect, useRef } from 'react';
 import './App.css';
 import { Owner } from './components/Owner';
 import { Avatar } from './components/Avatar';
@@ -22,7 +21,6 @@ const Image = avatar;
 
 function App() {
   const { items } = useProjectsList();
-  const modalRef = useRef(null);
   return (
     <main className="main">
       <Owner />
